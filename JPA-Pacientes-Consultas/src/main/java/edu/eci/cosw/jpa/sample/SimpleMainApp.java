@@ -16,24 +16,39 @@
  */
 package edu.eci.cosw.jpa.sample;
 
+import edu.eci.cosw.jpa.sample.model.Consulta;
+import edu.eci.cosw.jpa.sample.model.Paciente;
+import edu.eci.cosw.jpa.sample.model.PacienteId;
+import java.io.Serializable;
+import java.util.Date;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
 import org.hibernate.boot.registry.StandardServiceRegistryBuilder;
 import org.hibernate.cfg.Configuration;
 import org.hibernate.service.ServiceRegistry;
+import org.hibernate.type.SerializableType;
 
 /**
  *
  * @author hcadavid
  */
-public class SimpleMainApp {
+public class SimpleMainApp{
    
     public static void main(String a[]){
         SessionFactory sf=getSessionFactory();
         Session s=sf.openSession();
         Transaction tx=s.beginTransaction();
+        Paciente p = (Paciente) s.load(Paciente.class, new PacienteId(1,"cc"));
+        System.out.println("-------------------nombre------------------");
+        System.out.println(p.getNombre());
+        System.out.println("-------------------id------------------");
+        System.out.println(p.getId());
         
+        p.getConsultas().add(new Consulta(new Date(2018),"Carlos sanchez agregando tresdsfdsfsf"));
+        s.saveOrUpdate(p);
+
+
         tx.commit();    
         s.close();
         sf.close();
