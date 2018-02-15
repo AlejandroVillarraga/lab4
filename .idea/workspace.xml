@@ -2,13 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="127dc9d7-5311-418d-8a86-6c97162c1829" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/vcs.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/SimpleMainApp.java" afterPath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/SimpleMainApp.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Consulta.java" afterPath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Consulta.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Paciente.java" afterPath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Paciente.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/PacienteId.java" afterPath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/PacienteId.java" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/resources/hibernate.cfg.xml" afterPath="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/resources/hibernate.cfg.xml" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="TRACKING_ENABLED" value="true" />
@@ -18,39 +12,14 @@
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
   <component name="FileEditorManager">
-    <leaf>
+    <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
       <file leaf-file-name="SimpleMainApp.java" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/SimpleMainApp.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="510">
-              <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
-              <folding>
-                <element signature="e#0#1882#0" expanded="true" />
-                <element signature="imports" expanded="true" />
-              </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Consulta.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Consulta.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="9" column="0" lean-forward="true" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="Paciente.java" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Paciente.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="645">
-              <caret line="67" column="79" lean-forward="false" selection-start-line="67" selection-start-column="79" selection-end-line="67" selection-end-column="79" />
+            <state relative-caret-position="300">
+              <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
               <folding>
                 <element signature="imports" expanded="true" />
-                <element signature="e#1945#1946#0" expanded="true" />
-                <element signature="e#1975#1976#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -81,9 +50,9 @@
       <list>
         <option value="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/PacienteId.java" />
         <option value="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Consulta.java" />
-        <option value="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Paciente.java" />
         <option value="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/resources/hibernate.cfg.xml" />
         <option value="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/SimpleMainApp.java" />
+        <option value="$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Paciente.java" />
       </list>
     </option>
   </component>
@@ -111,134 +80,21 @@
       <foldersAlwaysOnTop value="true" />
     </navigator>
     <panes>
-      <pane id="Scope" />
-      <pane id="AndroidView" />
-      <pane id="PackagesPane" />
       <pane id="ProjectPane">
         <subPane>
           <expand>
             <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Cursos-Estudiantes" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="eci" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="eci" type="462c0819:PsiDirectoryNode" />
-              <item name="cosw" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="eci" type="462c0819:PsiDirectoryNode" />
-              <item name="cosw" type="462c0819:PsiDirectoryNode" />
-              <item name="jpa" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="eci" type="462c0819:PsiDirectoryNode" />
-              <item name="cosw" type="462c0819:PsiDirectoryNode" />
-              <item name="jpa" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="java" type="462c0819:PsiDirectoryNode" />
-              <item name="edu" type="462c0819:PsiDirectoryNode" />
-              <item name="eci" type="462c0819:PsiDirectoryNode" />
-              <item name="cosw" type="462c0819:PsiDirectoryNode" />
-              <item name="jpa" type="462c0819:PsiDirectoryNode" />
-              <item name="sample" type="462c0819:PsiDirectoryNode" />
-              <item name="model" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Pacientes-Consultas" type="462c0819:PsiDirectoryNode" />
-              <item name="src" type="462c0819:PsiDirectoryNode" />
-              <item name="main" type="462c0819:PsiDirectoryNode" />
-              <item name="resources" type="462c0819:PsiDirectoryNode" />
-            </path>
-            <path>
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="b2602c69:ProjectViewProjectNode" />
-              <item name="COSW-ECI_JPA_O-R-Mapping-Introduction" type="462c0819:PsiDirectoryNode" />
-              <item name="JPA-Polizas-Clientes" type="462c0819:PsiDirectoryNode" />
+              <item name="lab4" type="b2602c69:ProjectViewProjectNode" />
+              <item name="lab4" type="462c0819:PsiDirectoryNode" />
             </path>
           </expand>
           <select />
         </subPane>
       </pane>
+      <pane id="Scope" />
+      <pane id="AndroidView" />
       <pane id="Scratches" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -356,33 +212,33 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="-1" y="0" width="1922" height="1055" extended-state="6" />
+    <frame x="260" y="27" width="1602" height="875" extended-state="6" />
     <layout>
-      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
-      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
-      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Palette&#9;" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Image Layers" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Analysis" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
+      <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Capture Tool" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
-      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
+      <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Theme Preview" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
-      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
   </component>
   <component name="VcsContentAnnotationSettings">
@@ -393,6 +249,16 @@
     <watches-manager />
   </component>
   <component name="editorHistoryManager">
+    <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/SimpleMainApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="0">
+          <caret line="0" column="0" lean-forward="false" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Consulta.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -403,21 +269,13 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Paciente.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="645">
-          <caret line="67" column="79" lean-forward="false" selection-start-line="67" selection-start-column="79" selection-end-line="67" selection-end-column="79" />
+        <state relative-caret-position="705">
+          <caret line="67" column="58" lean-forward="true" selection-start-line="67" selection-start-column="58" selection-end-line="67" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
-            <element signature="e#1945#1946#0" expanded="true" />
-            <element signature="e#1975#1976#0" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
           </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/PacienteId.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="435">
-          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -429,12 +287,46 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Consulta.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="135">
+          <caret line="9" column="0" lean-forward="false" selection-start-line="9" selection-start-column="0" selection-end-line="9" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/PacienteId.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="435">
+          <caret line="33" column="35" lean-forward="false" selection-start-line="33" selection-start-column="35" selection-end-line="33" selection-end-column="35" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/resources/hibernate.cfg.xml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="225">
+          <caret line="15" column="58" lean-forward="false" selection-start-line="15" selection-start-column="58" selection-end-line="15" selection-end-column="58" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/model/Paciente.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="165">
+          <caret line="25" column="59" lean-forward="false" selection-start-line="25" selection-start-column="59" selection-end-line="25" selection-end-column="59" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#1740#1741#0" expanded="true" />
+            <element signature="e#1794#1795#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/JPA-Pacientes-Consultas/src/main/java/edu/eci/cosw/jpa/sample/SimpleMainApp.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="510">
-          <caret line="35" column="47" lean-forward="true" selection-start-line="35" selection-start-column="47" selection-end-line="35" selection-end-column="47" />
+        <state relative-caret-position="300">
+          <caret line="35" column="27" lean-forward="false" selection-start-line="35" selection-start-column="27" selection-end-line="35" selection-end-column="27" />
           <folding>
-            <element signature="e#0#1882#0" expanded="true" />
             <element signature="imports" expanded="true" />
           </folding>
         </state>
@@ -498,6 +390,18 @@
               <list>
                 <option value="0.2" />
                 <option value="0.6" />
+              </list>
+            </option>
+          </splitter-proportions>
+        </settings>
+      </state>
+      <state key="ProjectJDKs.UI">
+        <settings>
+          <last-edited>1.8</last-edited>
+          <splitter-proportions>
+            <option name="proportions">
+              <list>
+                <option value="0.2" />
               </list>
             </option>
           </splitter-proportions>

@@ -23,7 +23,7 @@ public class Paciente  implements java.io.Serializable {
      private PacienteId id;
      private String nombre;
      private Date fechaNacimiento;
-     private Set<Consulta> consultas = new HashSet<>(0);
+     private Set<Consulta> consultas = new HashSet<>(0) dfg;
 
     public Paciente() {
     }

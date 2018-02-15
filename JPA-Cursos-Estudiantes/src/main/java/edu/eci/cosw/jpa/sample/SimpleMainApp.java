@@ -16,6 +16,8 @@
  */
 package edu.eci.cosw.jpa.sample;
 
+import edu.eci.cosw.jpa.sample.model.Curso;
+import edu.eci.cosw.jpa.sample.model.Estudiante;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -33,6 +35,30 @@ public class SimpleMainApp {
         SessionFactory sf=getSessionFactory();
         Session s=sf.openSession();
         Transaction tx=s.beginTransaction();
+        
+        Estudiante e1 = new Estudiante(2105534, "Carlos"); //(Cliente) s.load(Cliente.class, new ClienteId(1,"cc"));
+        Estudiante e2 = new Estudiante(2105461, "Jhordana");
+        //p.getConsultas().add(new Consulta(new Date(2018),"Carlos sanchez agregando tresdsfdsfsf"));
+        Curso c1 = new Curso(5678, "Programacion orientada a objetos", "POOB");
+        Curso c2 = new Curso(5679, "Arquitectura de S", "ARSW");
+        c1.getEstudiantes().add(e1);
+        c1.getEstudiantes().add(e2);
+        c2.getEstudiantes().add(e1);
+        c2.getEstudiantes().add(e2);
+        e1.getCursos().add(c1);
+        e1.getCursos().add(c2);
+        e2.getCursos().add(c1);
+        e2.getCursos().add(c2);
+        s.saveOrUpdate(e1);
+        s.saveOrUpdate(e2);
+        s.saveOrUpdate(c1);
+        s.saveOrUpdate(c2);
+        
+        //Estudiante carlos=(Estudiante)s.load(Estudiante.class, 2105534);
+        //System.out.println("-----------------------CODIGO---------------------");
+        //System.out.println(((Curso)carlos.getCursos().toArray()[1]).getEstudiantes().size());
+        
+        
         
         tx.commit(); 
         s.close();
