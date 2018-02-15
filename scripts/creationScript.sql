@@ -1,6 +1,12 @@
-
-# Dump of table PACIENTES
-# ------------------------------------------------------------
+USE sql9221388;
+DROP TABLE IF EXISTS CONSULTAS CASCADE;
+DROP TABLE IF EXISTS `PACIENTES` CASCADE;
+DROP TABLE IF EXISTS POLIZAS_APROBADAS CASCADE;
+DROP TABLE IF EXISTS TIPOS_POLIZA CASCADE;
+DROP TABLE IF EXISTS CLIENTES CASCADE;
+DROP TABLE IF EXISTS ESTUDIANTES_CURSOS CASCADE ;
+DROP TABLE IF EXISTS CURSOS CASCADE;
+DROP TABLE IF EXISTS ESTUDIANTES CASCADE ;
 
 CREATE TABLE `PACIENTES` (
   `id` int(11) NOT NULL,
@@ -10,18 +16,40 @@ CREATE TABLE `PACIENTES` (
   PRIMARY KEY (`id`,`tipo_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
+
+CREATE TABLE `CONSULTAS` (
+  `idCONSULTAS` int(11) NOT NULL AUTO_INCREMENT,
+  `fecha_y_hora` datetime NOT NULL,
+  `resumen` varchar(45) COLLATE latin1_general_ci NOT NULL,
+  `PACIENTES_id` int(11) NOT NULL DEFAULT '0',
+  `PACIENTES_tipo_id` enum('cc','ce','rc','ti') COLLATE latin1_general_ci NOT NULL DEFAULT 'cc',
+  PRIMARY KEY (`idCONSULTAS`),
+  KEY `fk_CONSULTAS_PACIENTES1` (`PACIENTES_id`,`PACIENTES_tipo_id`),
+  CONSTRAINT `fk_CONSULTAS_PACIENTES1` FOREIGN KEY (`PACIENTES_id`, `PACIENTES_tipo_id`) REFERENCES `PACIENTES` (`id`, `tipo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+
 LOCK TABLES `PACIENTES` WRITE;
 /*!40000 ALTER TABLE `PACIENTES` DISABLE KEYS */;
 
 INSERT INTO `PACIENTES` (`id`, `tipo_id`, `nombre`, `fecha_nacimiento`)
 VALUES
 	(1,'cc','jhon','2015-02-02');
-
-/*!40000 ALTER TABLE `PACIENTES` ENABLE KEYS */;
 UNLOCK TABLES;
 
 
+/*----------------------------------------------------------------*/
 
+
+CREATE TABLE `TIPOS_POLIZA` (
+  `codigo_poliza` int(11) NOT NULL,
+  `nombre` varchar(45) COLLATE latin1_general_ci NOT NULL,
+  `descripcion` varchar(45) COLLATE latin1_general_ci NOT NULL,
+  `monto_maximo` bigint(20) NOT NULL,
+  PRIMARY KEY (`codigo_poliza`)
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+
+/*!40000 ALTER TABLE `TIPOS_POLIZA` DISABLE KEYS */;
 CREATE TABLE `CLIENTES` (
   `id` int(11) NOT NULL,
   `tipo_id` enum('cc','ce','ti') COLLATE latin1_general_ci NOT NULL,
@@ -31,9 +59,26 @@ CREATE TABLE `CLIENTES` (
   PRIMARY KEY (`id`,`tipo_id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
-LOCK TABLES `CLIENTES` WRITE;
 /*!40000 ALTER TABLE `CLIENTES` DISABLE KEYS */;
+CREATE TABLE `POLIZAS_APROBADAS` (
+  `fecha_aprobacion` date NOT NULL,
+  `fecha_vencimiento` date NOT NULL,
+  `CLIENTES_id` int(11) NOT NULL,
+  `CLIENTES_tipo_id` enum('cc','ce','ti') COLLATE latin1_general_ci NOT NULL,
+  `POLIZAS_codigo_poliza` int(11) NOT NULL,
+  PRIMARY KEY (`CLIENTES_id`,`CLIENTES_tipo_id`,`POLIZAS_codigo_poliza`),
+  KEY `fk_SOLICITUDES_POLIZAS1` (`POLIZAS_codigo_poliza`),
+  CONSTRAINT `fk_SOLICITUDES_CLIENTES` FOREIGN KEY (`CLIENTES_id`, `CLIENTES_tipo_id`) REFERENCES `CLIENTES` (`id`, `tipo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
+  CONSTRAINT `fk_SOLICITUDES_POLIZAS1` FOREIGN KEY (`POLIZAS_codigo_poliza`) REFERENCES `TIPOS_POLIZA` (`codigo_poliza`) ON DELETE NO ACTION ON UPDATE NO ACTION
+) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
+/*!40000 ALTER TABLE `POLIZAS_APROBADAS` DISABLE KEYS */;
 
+
+
+
+
+/*------------------------------------------------------------------ */
+LOCK TABLES `CLIENTES` WRITE;
 INSERT INTO `CLIENTES` (`id`, `tipo_id`, `nombre`, `direccion`, `telefono`)
 VALUES
 	(-1500496460,'cc','Sebascho','sebascho dir','my Phone'),
@@ -130,23 +175,7 @@ VALUES
 UNLOCK TABLES;
 
 
-# Dump of table CONSULTAS
-# ------------------------------------------------------------
 
-CREATE TABLE `CONSULTAS` (
-  `idCONSULTAS` int(11) NOT NULL AUTO_INCREMENT,
-  `fecha_y_hora` datetime NOT NULL,
-  `resumen` varchar(45) COLLATE latin1_general_ci NOT NULL,
-  `PACIENTES_id` int(11) NOT NULL DEFAULT '0',
-  `PACIENTES_tipo_id` enum('cc','ce','rc','ti') COLLATE latin1_general_ci NOT NULL DEFAULT 'cc',
-  PRIMARY KEY (`idCONSULTAS`),
-  KEY `fk_CONSULTAS_PACIENTES1` (`PACIENTES_id`,`PACIENTES_tipo_id`),
-  CONSTRAINT `fk_CONSULTAS_PACIENTES1` FOREIGN KEY (`PACIENTES_id`, `PACIENTES_tipo_id`) REFERENCES `PACIENTES` (`id`, `tipo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-
-
-# Dump of table CURSOS
-# ------------------------------------------------------------
 
 CREATE TABLE `CURSOS` (
   `id` int(11) NOT NULL,
@@ -167,10 +196,6 @@ VALUES
 /*!40000 ALTER TABLE `CURSOS` ENABLE KEYS */;
 UNLOCK TABLES;
 
-
-# Dump of table ESTUDIANTES
-# ------------------------------------------------------------
-
 CREATE TABLE `ESTUDIANTES` (
   `codigo` int(11) NOT NULL,
   `nombre` varchar(45) COLLATE latin1_general_ci NOT NULL,
@@ -183,14 +208,12 @@ LOCK TABLES `ESTUDIANTES` WRITE;
 INSERT INTO `ESTUDIANTES` (`codigo`, `nombre`)
 VALUES
 	(2,'DiegoL'),
-	(24,'DiegoL');
+	(24,'DiegoS');
 	
 
 /*!40000 ALTER TABLE `ESTUDIANTES` ENABLE KEYS */;
 UNLOCK TABLES;
 
-# Dump of table ESTUDIANTES_CURSOS
-# ------------------------------------------------------------
 
 CREATE TABLE `ESTUDIANTES_CURSOS` (
   `ESTUDIANTES_codigo` int(11) NOT NULL,
@@ -202,112 +225,8 @@ CREATE TABLE `ESTUDIANTES_CURSOS` (
   CONSTRAINT `fk_ESTUDIANTES_has_CURSOS_ESTUDIANTES1` FOREIGN KEY (`ESTUDIANTES_codigo`) REFERENCES `ESTUDIANTES` (`codigo`) ON DELETE NO ACTION ON UPDATE NO ACTION
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
 
-LOCK TABLES `ESTUDIANTES_CURSOS` WRITE;
 /*!40000 ALTER TABLE `ESTUDIANTES_CURSOS` DISABLE KEYS */;
-
-INSERT INTO `ESTUDIANTES_CURSOS` (`ESTUDIANTES_codigo`, `CURSOS_id`)
-VALUES
-	(0,2),
-	(1,24);
-
-/*!40000 ALTER TABLE `ESTUDIANTES_CURSOS` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table POLIZAS_APROBADAS
-# ------------------------------------------------------------
-
-CREATE TABLE `POLIZAS_APROBADAS` (
-  `fecha_aprobacion` date NOT NULL,
-  `fecha_vencimiento` date NOT NULL,
-  `CLIENTES_id` int(11) NOT NULL,
-  `CLIENTES_tipo_id` enum('cc','ce','ti') COLLATE latin1_general_ci NOT NULL,
-  `POLIZAS_codigo_poliza` int(11) NOT NULL,
-  PRIMARY KEY (`CLIENTES_id`,`CLIENTES_tipo_id`,`POLIZAS_codigo_poliza`),
-  KEY `fk_SOLICITUDES_POLIZAS1` (`POLIZAS_codigo_poliza`),
-  CONSTRAINT `fk_SOLICITUDES_CLIENTES` FOREIGN KEY (`CLIENTES_id`, `CLIENTES_tipo_id`) REFERENCES `CLIENTES` (`id`, `tipo_id`) ON DELETE NO ACTION ON UPDATE NO ACTION,
-  CONSTRAINT `fk_SOLICITUDES_POLIZAS1` FOREIGN KEY (`POLIZAS_codigo_poliza`) REFERENCES `TIPOS_POLIZA` (`codigo_poliza`) ON DELETE NO ACTION ON UPDATE NO ACTION
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-
-LOCK TABLES `POLIZAS_APROBADAS` WRITE;
-/*!40000 ALTER TABLE `POLIZAS_APROBADAS` DISABLE KEYS */;
-
-INSERT INTO `POLIZAS_APROBADAS` (`fecha_aprobacion`, `fecha_vencimiento`, `CLIENTES_id`, `CLIENTES_tipo_id`, `POLIZAS_codigo_poliza`)
-VALUES
-	('3914-11-12','3915-11-12',1,'cc',1),
-	('1977-01-01','1977-01-01',1,'cc',122221),
-	('2015-01-02','2016-01-02',3,'cc',3),
-	('1977-01-01','1977-01-01',10,'cc',122221),
-	('2014-02-01','2014-02-01',23,'cc',1),
-	('1905-06-05','1906-07-06',114,'cc',1),
-	('1905-06-05','1906-07-06',115,'cc',1),
-	('5816-01-02','2015-01-02',123,'cc',3),
-	('1969-12-31','1969-12-31',300,'cc',1),
-	('1969-12-31','1969-12-31',301,'cc',1),
-	('1969-12-31','1969-12-31',302,'cc',1),
-	('1969-12-31','1969-12-31',303,'cc',1),
-	('1969-12-31','1969-12-31',304,'cc',1),
-	('1969-12-31','1969-12-31',305,'cc',1),
-	('1969-12-31','1969-12-31',306,'cc',1),
-	('1969-12-31','1969-12-31',500,'cc',1),
-	('1969-12-31','1969-12-31',787,'cc',2),
-	('2014-01-02','2015-01-02',1234,'cc',3),
-	('1905-06-05','1906-07-06',1274,'cc',1),
-	('1969-12-31','1969-12-31',1438,'cc',1),
-	('1969-12-31','1969-12-31',1439,'cc',1),
-	('2007-12-25','2008-12-25',4151,'cc',201),
-	('1918-07-08','2014-02-05',20219,'cc',1),
-	('1918-07-08','2014-02-05',20220,'cc',1),
-	('3914-11-12','3915-11-12',34567,'cc',1),
-	('3914-02-03','3914-04-11',40394,'cc',1),
-	('3914-11-12','3915-11-12',125445,'cc',1),
-	('3914-03-08','3914-03-10',131313,'cc',1),
-	('2014-08-26','2014-08-26',373724,'cc',1),
-	('3914-02-03','3914-04-11',403944,'cc',1),
-	('2014-09-21','2014-09-21',639427,'cc',1),
-	('3913-10-25','3914-10-25',678976,'cc',2),
-	('2015-08-25','2016-02-01',911129,'cc',1),
-	('2007-12-25','2008-12-25',1014270,'cc',201),
-	('2014-02-01','2014-02-01',1024530,'cc',1),
-	('1969-12-31','1969-12-31',1032463,'cc',1),
-	('2013-08-28','2013-08-28',1055694,'cc',2),
-	('3913-10-03','3914-10-03',2077015,'cc',2),
-	('2013-08-28','3913-09-29',2077776,'cc',1),
-	('2001-12-21','2008-12-21',2078264,'cc',2),
-	('3913-09-25','3914-09-25',2081584,'cc',2),
-	('1969-12-31','1969-12-31',2082775,'cc',1000),
-	('2013-02-19','2013-03-19',2083164,'cc',2),
-	('3913-05-21','3914-07-10',2083809,'cc',1),
-	('1969-12-31','1969-12-31',10324634,'cc',1),
-	('3913-11-15','3914-11-15',10394567,'cc',2),
-	('2013-08-28','2013-08-28',10525658,'cc',3569),
-	('1969-12-31','1969-12-31',20827755,'cc',1),
-	('2015-02-04','2015-02-04',789456123,'cc',1),
-	('3913-11-15','3914-11-15',1000222444,'cc',1),
-	('2013-02-20','2013-02-20',1014227392,'cc',1),
-	('2014-05-02','2014-12-02',1014250231,'cc',1),
-	('1969-12-31','1969-12-31',1020764472,'cc',1),
-	('2014-02-01','2014-02-01',1024530883,'cc',1),
-	('3913-01-02','2014-02-05',1033739673,'cc',1);
-
-/*!40000 ALTER TABLE `POLIZAS_APROBADAS` ENABLE KEYS */;
-UNLOCK TABLES;
-
-
-# Dump of table TIPOS_POLIZA
-# ------------------------------------------------------------
-
-CREATE TABLE `TIPOS_POLIZA` (
-  `codigo_poliza` int(11) NOT NULL,
-  `nombre` varchar(45) COLLATE latin1_general_ci NOT NULL,
-  `descripcion` varchar(45) COLLATE latin1_general_ci NOT NULL,
-  `monto_maximo` bigint(20) NOT NULL,
-  PRIMARY KEY (`codigo_poliza`)
-) ENGINE=InnoDB DEFAULT CHARSET=latin1 COLLATE=latin1_general_ci;
-
 LOCK TABLES `TIPOS_POLIZA` WRITE;
-/*!40000 ALTER TABLE `TIPOS_POLIZA` DISABLE KEYS */;
-
 INSERT INTO `TIPOS_POLIZA` (`codigo_poliza`, `nombre`, `descripcion`, `monto_maximo`)
 VALUES
 	(-1500496538,'NuevaPoliza','Esta es una nueva Poliza',25),
@@ -361,14 +280,15 @@ VALUES
 	(1020372,'dPTans','poliza de prueba trans',8050),
 	(123451267,'Poliza_Accidente','Descripcion',500000);
 
-/*!40000 ALTER TABLE `TIPOS_POLIZA` ENABLE KEYS */;
+
 UNLOCK TABLES;
 
+LOCK TABLES `ESTUDIANTES_CURSOS` WRITE;
+INSERT INTO `ESTUDIANTES_CURSOS` (`ESTUDIANTES_codigo`, `CURSOS_id`)
+VALUES
+	(2,0),
+	(24,1);
 
+/*!40000 ALTER TABLE `ESTUDIANTES_CURSOS` ENABLE KEYS */;
+UNLOCK TABLES;
 
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
-/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
-/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;

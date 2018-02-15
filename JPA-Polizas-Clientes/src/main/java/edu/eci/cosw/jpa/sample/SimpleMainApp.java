@@ -16,6 +16,9 @@
  */
 package edu.eci.cosw.jpa.sample;
 
+import edu.eci.cosw.jpa.sample.model.Cliente;
+import edu.eci.cosw.jpa.sample.model.ClienteId;
+import java.util.Date;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
 import org.hibernate.Transaction;
@@ -33,6 +36,11 @@ public class SimpleMainApp {
         SessionFactory sf=getSessionFactory();
         Session s=sf.openSession();
         Transaction tx=s.beginTransaction();
+        
+        //Cliente p = (Cliente) s.load(Cliente.class, new ClienteId(1,"cc"));       
+        //p.getConsultas().add(new Consulta(new Date(2018),"Carlos sanchez agregando tresdsfdsfsf"));
+        Cliente c = new Cliente (new ClienteId(1072714444,"cc"),"Carlos","cra 7","3102953913");
+        s.saveOrUpdate(c);
         
         tx.commit();       
         s.close();
