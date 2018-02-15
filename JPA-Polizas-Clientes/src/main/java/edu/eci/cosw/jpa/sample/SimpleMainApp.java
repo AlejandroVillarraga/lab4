@@ -37,11 +37,12 @@ public class SimpleMainApp {
         Session s=sf.openSession();
         Transaction tx=s.beginTransaction();
         
-        //Cliente p = (Cliente) s.load(Cliente.class, new ClienteId(1,"cc"));       
+        Cliente p = (Cliente) s.load(Cliente.class, new ClienteId(1,"cc"));
+        System.out.println(p.getNombre());
         //p.getConsultas().add(new Consulta(new Date(2018),"Carlos sanchez agregando tresdsfdsfsf"));
-        Cliente c = new Cliente (new ClienteId(1072714444,"cc"),"Carlos","cra 7","3102953913");
+        Cliente c = new Cliente (new ClienteId(107271444,"cc"),"Carlos","cra 7 CHIA","3102953913");
         s.saveOrUpdate(c);
-        
+        System.out.println("Guardando cliente");
         tx.commit();       
         s.close();
         sf.close();

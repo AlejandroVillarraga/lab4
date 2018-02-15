@@ -10,6 +10,7 @@ import javax.persistence.Entity;
 import javax.persistence.JoinColumn;
 import javax.persistence.JoinColumns;
 import javax.persistence.ManyToOne;
+import javax.persistence.MapsId;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
@@ -49,6 +50,7 @@ public class PolizaAprobada  implements java.io.Serializable {
     }
     
     @ManyToOne(cascade=ALL)
+    @MapsId("id")
     @JoinColumns({
         @JoinColumn(name="CLIENTES_id", referencedColumnName="id", nullable=false),
         @JoinColumn(name="CLIENTES_tipo_id", referencedColumnName="tipo_id", nullable=false)
@@ -62,6 +64,7 @@ public class PolizaAprobada  implements java.io.Serializable {
     }
     
     @ManyToOne(cascade=ALL)
+    @MapsId("id")
     @JoinColumn(name="POLIZAS_codigo_poliza", referencedColumnName="codigo_poliza", nullable=false)
     public TipoPoliza getTiposPoliza() {
         return this.tiposPoliza;
