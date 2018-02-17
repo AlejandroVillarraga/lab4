@@ -18,6 +18,9 @@ package edu.eci.cosw.jpa.sample;
 
 import edu.eci.cosw.jpa.sample.model.Cliente;
 import edu.eci.cosw.jpa.sample.model.ClienteId;
+import edu.eci.cosw.jpa.sample.model.PolizaAprobada;
+import edu.eci.cosw.jpa.sample.model.PolizaAprobadaId;
+import edu.eci.cosw.jpa.sample.model.TipoPoliza;
 import java.util.Date;
 import org.hibernate.Session;
 import org.hibernate.SessionFactory;
@@ -41,8 +44,11 @@ public class SimpleMainApp {
         System.out.println(p.getNombre());
         //p.getConsultas().add(new Consulta(new Date(2018),"Carlos sanchez agregando tresdsfdsfsf"));
         Cliente c = new Cliente (new ClienteId(107271444,"cc"),"Carlos","cra 7 CHIA","3102953913");
+        PolizaAprobada pa = new PolizaAprobada(new PolizaAprobadaId(1072714444,"cc", 1),c, (TipoPoliza)s.load(TipoPoliza.class,1), new Date(10000), new Date(100000));
+        
         s.saveOrUpdate(c);
-        System.out.println("Guardando cliente");
+        s.saveOrUpdate(pa);
+        
         tx.commit();       
         s.close();
         sf.close();
